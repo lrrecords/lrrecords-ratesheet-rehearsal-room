@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LRRECORDS Studio — Rehearsal Room Rate Sheet</title>
+  <meta name="description" content="LRRECORDS Studio rehearsal room rate sheet: times, rates, discounts, packages, booking terms and contact details." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --accent:#0ea5a4; /* teal */
+      --card:#f8fafc;
+      --max-width:900px;
+      --pad:20px;
+      --header-height:84px;
+      --radius:8px;
+    }
+    *{box-sizing:border-box}
+/* ❌ REMOVE: html,body{height:100%} */
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,#fbfdfe 0%, #f6f9fb 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  padding:24px;
+  min-height:100vh; /* ✅ Replaces height:100% */
+  display:flex;
+  justify-content:center;
+  align-items:flex-start; /* ✅ Start from top */
+}
+
+    .sheet{
+  background:var(--bg);
+  width:100%;
+  max-width:var(--max-width);
+  border-radius:12px;
+  box-shadow: 0 6px 28px rgba(15,23,42,0.08);
+  overflow:hidden; /* No internal scrollbars */
+  border:1px solid rgba(15,23,42,0.04);
+}
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:18px 24px;
+      background:linear-gradient(90deg, rgba(14,165,164,0.08), rgba(14,165,164,0.02));
+      border-bottom:1px solid rgba(15,23,42,0.03);
+    }
+    .brand {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      line-height:1;
+    }
+    .title{
+      font-weight:700;
+      font-size:18px;
+      color:var(--text);
+    }
+    .subtitle{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:4px;
+    }
+
+    main.content{
+      padding:var(--pad);
+    }
+
+    .lead{
+      color:var(--muted);
+      margin:0 0 12px 0;
+    }
+
+    h2{
+      margin:20px 0 8px 0;
+      font-size:16px;
+      color:var(--text);
+    }
+    .section {
+      background:var(--card);
+      border-radius:8px;
+      padding:14px;
+      margin-bottom:12px;
+      border:1px solid rgba(15,23,42,0.03);
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:8px;
+      font-size:14px;
+    }
+    thead th{
+      text-align:left;
+      font-size:13px;
+      padding:8px 6px;
+      color:var(--muted);
+      border-bottom:1px dashed rgba(15,23,42,0.06);
+    }
+    tbody td{
+      padding:10px 6px;
+      vertical-align:top;
+      border-bottom:1px solid rgba(15,23,42,0.03);
+      font-size:14px;
+    }
+    tbody tr:last-child td{border-bottom:0}
+
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+    .strong{font-weight:700;color:var(--text)}
+    .accent{color:var(--accent);font-weight:600}
+
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:6px 0}
+
+    footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:14px 18px;
+      border-top:1px solid rgba(15,23,42,0.03);
+      background:linear-gradient(90deg, rgba(14,165,164,0.02), rgba(14,165,164,0.01));
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Print styles */
+    @media print{
+      body{padding:0;background:transparent}
+      .sheet{box-shadow:none;border:0;border-radius:0;}
+      footer{display:block;font-size:11px}
+      header{display:block}
+    }
+
+    /* Responsive */
+    @media (max-width:640px){
+      body{padding:12px}
+      .sheet{border-radius:10px}
+      header{padding:12px}
+      .title{font-size:15px}
+      main.content{padding:12px}
+    }
+
+    /* Utility grid for two-column features */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:640px){.grid-2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="sheet" role="document" aria-labelledby="docTitle">
+    <header>
+      <div style="width:52px;height:52px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px">
+        LR
+      </div>
+      <div class="brand">
+        <div id="docTitle" class="title">LRRECORDS STUDIO</div>
+        <div class="subtitle">Professional Rehearsal Room — Perth, WA</div>
+      </div>
+    </header>
+
+    <main class="content">
+      <p class="lead small">Complete summary of times, rates, discounts, packages and booking details.</p>
+
+      <section class="section" aria-labelledby="aboutHeading">
+        <h2 id="aboutHeading">About</h2>
+        <ul>
+          <li>Professionally acoustically treated rehearsal room.</li>
+          <li>Included backline: full drum kit (tuned &amp; maintained), 1 × guitar amp, 1 × bass amp, PA for monitoring, basic mic set &amp; cables.</li>
+          <li>Friendly support available for setup; engineer/tech available on request (additional fee).</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="ratesHeading">
+        <h2 id="ratesHeading">Standard Rates &amp; Times — summary timetable with full and discounted prices</h2>
+
+        <p class="muted small">
+          Notes:
+        </p>
+        <ul class="small">
+          <li>Block/half-day/full-day discounts: <strong>20% off</strong> the full (hourly × hours) room booking total. Discounted price = Full price × 0.80.</li>
+          <li>The 20% block discount applies only to room booking time totals. It does <strong>not</strong> apply to recording fees, multitrack recording, or engineer/tech fees — those services are charged at their listed rates and are excluded from the 20% block discount.</li>
+          <li>Package promotions (weekly slot 10% off, block booking prepaid 12% off, first-time 15% off 2-hour booking) are separate offers and may apply in addition to or instead of the block discount — please confirm stacking rules at booking.</li>
+        </ul>
+
+        <div style="overflow:auto;margin-top:12px">
+          <table aria-describedby="ratesHeading">
+            <thead>
+              <tr>
+                <th>Timeslot / Day(s)</th>
+                <th>Time range</th>
+                <th>Hourly rate</th>
+                <th>Typical block / length</th>
+                <th>Full price</th>
+                <th>Discounted price (20% off)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Weekday daytime (general)</td>
+                <td>Mon–Thu 09:00–17:00</td>
+                <td>$40/hr</td>
+                <td>Half day — 4 hrs</td>
+                <td>$160 (4 × $40)</td>
+                <td>$128</td>
+              </tr>
+              <tr>
+                <td>Weekday daytime — Tuesday</td>
+                <td>Tue 09:00–13:00</td>
+                <td>$40/hr</td>
+                <td>4 hrs (half day)</td>
+                <td>$160</td>
+                <td>$128</td>
+              </tr>
+              <tr>
+                <td>Weekday daytime — Thursday</td>
+                <td>Thu 14:30–17:00</td>
+                <td>$40/hr</td>
+                <td>2.5 hrs (short slot)</td>
+                <td>$100 (2.5 × $40)</td>
+                <td>$80</td>
+              </tr>
+              <tr>
+                <td>Weekday daytime — Friday</td>
+                <td>Fri 09:00–17:00</td>
+                <td>$40/hr</td>
+                <td>Full day — 8 hrs</td>
+                <td>$320 (8 × $40)</td>
+                <td>$256</td>
+              </tr>
+              <tr>
+                <td>Weekday evenings (general)</td>
+                <td>Mon–Thu 17:00–22:00</td>
+                <td>$50/hr</td>
+                <td>3-hour block</td>
+                <td>$150 (3 × $50)</td>
+                <td>$120</td>
+              </tr>
+              <tr>
+                <td>Weekday evening — Tuesday</td>
+                <td>Tue 18:30–22:00</td>
+                <td>$50/hr</td>
+                <td>3.5 hrs (typical slot)</td>
+                <td>$175 (3.5 × $50)</td>
+                <td>$140</td>
+              </tr>
+              <tr>
+                <td>Weekday evening — Wednesday</td>
+                <td>Wed 19:00–22:00</td>
+                <td>$50/hr</td>
+                <td>3 hrs</td>
+                <td>$150</td>
+                <td>$120</td>
+              </tr>
+              <tr>
+                <td>Weekend &amp; peak (half day)</td>
+                <td>Fri 17:00 onward; Sat–Sun</td>
+                <td>$70/hr</td>
+                <td>Half day — 4 hrs</td>
+                <td>$280 (4 × $70)</td>
+                <td>$224</td>
+              </tr>
+              <tr>
+                <td>Weekend &amp; peak (5-hr)</td>
+                <td>Fri 17:00 onward; Sat–Sun</td>
+                <td>$70/hr</td>
+                <td>5 hrs</td>
+                <td>$350 (5 × $70)</td>
+                <td>$280</td>
+              </tr>
+              <tr>
+                <td>Weekend &amp; peak (full day — 8 hrs)</td>
+                <td>Fri 17:00 onward; Sat–Sun</td>
+                <td>$70/hr</td>
+                <td>Full day — 8 hrs</td>
+                <td>$560 (8 × $70)</td>
+                <td>$448</td>
+              </tr>
+              <tr>
+                <td>Weekend &amp; peak (long day — 10 hrs)</td>
+                <td>Fri 17:00 onward; Sat–Sun</td>
+                <td>$70/hr</td>
+                <td>Full day — 10 hrs</td>
+                <td>$700 (10 × $70)</td>
+                <td>$560</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="packagesHeading">
+        <h2 id="packagesHeading">Packages &amp; Add-ons</h2>
+        <ul>
+          <li>Weekly regular slot (same time each week): 10% discount on listed hourly rates.</li>
+          <li>Block booking (10+ hours prepaid): 12% discount.</li>
+          <li>First-time band special: 15% off your first 2-hour booking.</li>
+          <li>Multitrack rehearsal recording (capture your session): $45/hr (includes basic stereo mixdown).</li>
+          <li>On-call engineer / tech: $40/hr.</li>
+          <li>Extra guitar / amp hire or upgraded kit on request — prices vary.</li>
+          <li>Drum maintenance / excessive setup fee: $30 (if requested or heavy use).</li>
+        </ul>
+
+        <p class="muted small"><strong>Important:</strong> The 20% block/half-day/full-day discount does NOT apply to recording fees, multitrack recording, or engineer/tech fees — those services are charged at their listed rates and are excluded from the 20% block discount.</p>
+      </section>
+
+      <div class="grid-2">
+        <section class="section" aria-labelledby="termsHeading">
+          <h2 id="termsHeading">Booking terms (short)</h2>
+          <ul>
+            <li>Minimum booking: 1 hour (2 hours recommended for new bands).</li>
+            <li>Cancellation: Full refund if cancelled 48+ hours before start; less than 48 hours — 50% refund.</li>
+            <li>Security: First-time bookings require a valid card hold or bond.</li>
+            <li>Insurance: Bands are responsible for their gear; public liability coverage recommended.</li>
+          </ul>
+        </section>
+
+        <section class="section" aria-labelledby="feesHeading">
+          <h2 id="feesHeading">Additional fees (explicit)</h2>
+          <ul>
+            <li>Multitrack rehearsal recording (includes basic stereo mixdown): $45/hr (no 20% block discount).</li>
+            <li>On-call engineer / tech: $40/hr (no 20% block discount).</li>
+            <li>Extra guitar / amp hire or upgraded kit: prices vary — request quote.</li>
+            <li>Drum maintenance / excessive setup fee: $30 (flat if requested or heavy use).</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="section" aria-labelledby="howtoHeading">
+        <h2 id="howtoHeading">How to Book</h2>
+        <p class="strong">Phone: <span class="muted">0421057617</span></p>
+        <p class="strong">Email: <span class="muted">brett@lrrecords.com.au</span></p>
+        <p class="strong">Online: <span class="muted">lrrecords.com.au</span></p>
+      </section>
+
+      <section class="section" aria-labelledby="whyHeading">
+        <h2 id="whyHeading">Why choose us</h2>
+        <ul>
+          <li>Pro acoustic treatment — better sound, faster rehearsals.</li>
+          <li>Reliable, well-maintained backline included.</li>
+          <li>Flexible hours and competitive Perth rates.</li>
+          <li>Recording options available for quick demos/pre-production.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>LRRECORDS STUDIO — Perth, WA</div>
+      <div class="small muted">Page 1 • Contact: brett@lrrecords.com.au • 0421057617</div>
+    </footer>
+  </div>
+
+  <!-- Minimal JS: print button and keyboard shortcut (optional) -->
+  <script>
+    // Press "p" to print — subtle helper for users editing the page.
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'p' && (e.ctrlKey || e.metaKey)) {
+        // Ctrl/Cmd + P typically opens print; we let browser handle default
+        return;
+      }
+      if(e.key === 'p' && !e.metaKey && !e.ctrlKey){
+        window.print();
+      }
+    }, false);
+  </script>
+</body>
+</html>
