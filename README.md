@@ -14,7 +14,7 @@ LRRECORDS STUDIO — Rehearsal Room Rate Sheet
 
 ## About
 - Professionally acoustically treated rehearsal room.  
-- Included backline: full drum kit (tuned & maintained), 1 × guitar amp, 1 × bass amp, PA for monitoring, basic mic set & cables.  
+- Included backline: full drum kit (tuned & maintained), 2 × guitar amp, 1 × bass amp, PA for monitoring, basic mic set & cables.  
 - Friendly support available for setup; engineer/tech available on request (additional fee).
 
 ---
